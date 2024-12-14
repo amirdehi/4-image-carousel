@@ -1,0 +1,79 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Carousel Container */
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Images Styling */
+.carousel img {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.carousel img.main {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel img.side {
+    width: 40%;
+    opacity: 0.5;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+/* Title Under Main Image */
+.image-title {
+    position: absolute;
+    bottom: -30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 4;
+}
+.nav-button.left {
+    left: 10px;
+}
+.nav-button.right {
+    right: 10px;
+}
