@@ -1,32 +1,29 @@
-
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: #696880;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-/* Carousel Container */
 .carousel {
     display: flex;
     align-items: center;
     position: relative;
     width: 800px;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
 }
 
-/* Images Styling */
 .carousel img {
     position: absolute;
+    right: 20%;
     width: 60%;
     height: 100%;
     object-fit: cover;
@@ -41,39 +38,32 @@ body {
 }
 
 .carousel img.side {
-    width: 40%;
+    width: 20%;
     opacity: 0.5;
     transform: scale(0.9);
     z-index: 1;
 }
 
-/* Title Under Main Image */
-.image-title {
-    position: absolute;
-    bottom: -30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    z-index: 3;
-}
-
-/* Navigation Buttons */
 .nav-button {
     position: absolute;
+    height: 90%;
+    width: 20%;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: red;
     font-size: 2rem;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 4;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
 }
+
 .nav-button.left {
     left: 10px;
 }
+
 .nav-button.right {
     right: 10px;
 }
