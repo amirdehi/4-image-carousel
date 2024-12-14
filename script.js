@@ -11,17 +11,17 @@ function updateCarousel(index) {
         if (i === index) {
             img.classList.add('main');
             img.classList.remove('side');
-            updateSideImagesBackground(index);
         } else {
             img.classList.remove('main');
             img.classList.add('side');
         }
     });
+    updateSideImagesBackground();
 }
 
-function updateSideImagesBackground(index) {
-    let nextIndex = (index + 1) % images.length;
-    let prevIndex = (index - 1 + images.length) % images.length;
+function updateSideImagesBackground() {
+    let nextIndex = (currentIndex + 1) % images.length;
+    let prevIndex = (currentIndex - 1 + images.length) % images.length;
     nextBtn.style.backgroundImage = `url(${images[nextIndex].src})`;
     prevBtn.style.backgroundImage = `url(${images[prevIndex].src})`;
 }
@@ -38,6 +38,7 @@ function prevImage() {
 
 nextBtn.addEventListener('click', nextImage);
 prevBtn.addEventListener('click', prevImage);
+window.onload = updateCarousel(0);
 
 images.forEach((img, i) => {
     img.addEventListener('click', () => {
